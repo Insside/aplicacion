@@ -27,8 +27,8 @@ require_once($ROOT . "modulos/proveedores/librerias/Configuracion.cnf.php");
  * POSSIBILITY OF SUCH DAMAGE.
  */
 $validaciones=new Validaciones();
-$transaccion=$validaciones->recibir("transaccion");
-$trasmision = $validaciones->recibir("trasmision");
+$transaccion=Request::getValue("transaccion");
+$trasmision = Request::getValue("trasmision");
 $url['formulario']=$ROOT . "modulos/usuarios/consultas/usuario/formulario.inc.php";
 $url['procesador']=$ROOT . "modulos/usuarios/consultas/usuario/procesador.inc.php";
 

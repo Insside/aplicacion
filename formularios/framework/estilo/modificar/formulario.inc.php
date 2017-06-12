@@ -2,13 +2,13 @@
 /** Variables * */
 $validaciones = new Validaciones();
 $afe=new Aplicacion_Framework_Estilos();
-$estilo=$afe->consultar($validaciones->recibir("estilo"));
+$estilo=$afe->consultar(Request::getValue("estilo"));
 /** Valores * */
 $v=$estilo;
 //$v['css']=$afe->expresion($estilo);
 $v['css']=urldecode($v['css']);
 /** Campos * */
-$f->oculto("itable", $validaciones->recibir("itable"));
+$f->oculto("itable", Request::getValue("itable"));
 $f->campos['estilo'] = $f->text("estilo", $v['estilo'], "10", "required codigo", true);
 $f->campos['clase'] = $f->text("clase", $v['clase'], "64", "required codigo", true);
 $f->campos['subclase'] = $f->text("subclase", $v['subclase'], "64", "", false);

@@ -1,7 +1,7 @@
 <?php 
 $validaciones=new Validaciones();
 $componentes=new Aplicacion_Modulos_Componentes();
-$componente=$componentes->consultar($validaciones->recibir('componente'));
+$componente=$componentes->consultar(Request::getValue('componente'));
 /* 
  * Copyright (c) 2014, Jose Alexis Correa Valencia
  * All rights reserved.

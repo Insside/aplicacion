@@ -26,8 +26,8 @@ require_once($ROOT . "modulos/aplicacion/librerias/Configuracion.cnf.php");
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-$transaccion = $validaciones->recibir('transaccion');
-$tabla =  $validaciones->recibir('tabla');
+$transaccion = Request::getValue('transaccion');
+$tabla =  Request::getValue('tabla');
 $cadenas = new Cadenas();
 
 $db = new MySQL(Sesion::getConexion());

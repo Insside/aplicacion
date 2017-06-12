@@ -1,7 +1,7 @@
 <?php
 $validaciones=new Validaciones();
 $clases=new Aplicacion_Framework_Clases();
-$v=$clases->consultar($validaciones->recibir("clase"));
+$v=$clases->consultar(Request::getValue("clase"));
 $v["contenido"]=$clases->codensador($v["clase"]);
 /** Campos **/
 $f->campos['contenido']=$f->iAreaCode("contenido","javascript",$v['contenido'],"","480");

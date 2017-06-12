@@ -32,10 +32,10 @@ $validaciones = new Validaciones();
 $funciones=new Aplicacion_Framework_Funciones();
 /** Valores **/
 $usuario=Sesion::usuario();
-$valores=$funciones->consultar($validaciones->recibir("funcion"));
+$valores=$funciones->consultar(Request::getValue("funcion"));
 $valores['creador']=$usuario['usuario'];
 /** Campos **/
-$f->oculto("itable",$validaciones->recibir('itable'));
+$f->oculto("itable",Request::getValue('itable'));
 $f->campos['clase']=$f->text("clase",$valores['clase'],"10","required codigo",true);
 $f->campos['funcion']=$f->text("funcion",$valores['funcion'],"10","required codigo",true);
 $f->campos['nombre']=$f->dynamic(array("field"=>"nombre","value"=>$valores["nombre"]));

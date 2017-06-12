@@ -27,8 +27,8 @@ require_once($ROOT . "modulos/aplicacion/librerias/Configuracion.cnf.php");
  * POSSIBILITY OF SUCH DAMAGE.
  */
 $validaciones=new Validaciones();
-$transaccion = $validaciones->recibir('transaccion');
-$tabla =  $validaciones->recibir('tabla');
+$transaccion = Request::getValue('transaccion');
+$tabla =  Request::getValue('tabla');
 $cadenas = new Cadenas();
 
 $db = new MySQL(Sesion::getConexion());

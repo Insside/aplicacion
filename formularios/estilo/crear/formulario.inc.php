@@ -3,7 +3,7 @@
 $cadenas = new Cadenas();
 $fechas = new Fechas();
 $validaciones = new Validaciones();
-$itable=$validaciones->recibir("itable");
+$itable=Request::getValue("itable");
 /** Valores * */
 if(!empty($itable)){$f->oculto("itable",$itable);}
 $f->campos['identidad']=$f->text("identidad","",64,"");

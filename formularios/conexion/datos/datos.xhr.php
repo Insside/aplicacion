@@ -30,8 +30,8 @@ $validaciones = new Validaciones();
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-$transaccion = $validaciones->recibir("transaccion");
-$trasmision = $validaciones->recibir("trasmision");
+$transaccion = Request::getValue("transaccion");
+$trasmision = Request::getValue("trasmision");
 $_path = dirname(__FILE__);
 $url['formulario'] = $_path . "/formulario.inc.php";
 $url['procesador'] = $_path . "/procesador.inc.php";

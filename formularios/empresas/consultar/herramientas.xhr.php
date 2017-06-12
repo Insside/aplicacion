@@ -4,7 +4,7 @@ require_once($ROOT . "modulos/solicitudes/librerias/Configuracion.cnf.php");
 $sesion = new Sesion();
 $validaciones = new Validaciones();
 $solicitudes=new Solicitudes();
-$solicitud =$solicitudes->consultar($validaciones->recibir("solicitud"));
+$solicitud =$solicitudes->consultar(Request::getValue("solicitud"));
 /*
  * Copyright (c) 2014, Alexis
  * All rights reserved.

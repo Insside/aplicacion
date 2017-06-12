@@ -28,7 +28,7 @@ $funciones=new Aplicacion_Framework_Funciones();
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-$funcion=$funciones->consultar($validaciones->recibir("funcion"));
+$funcion=$funciones->consultar(Request::getValue("funcion"));
 ?>
 <div class="toolbox divider">
   <a href="#" onClick="MUI.Aplicacion_Framework_Clase_Explorar('<?php echo($funcion['clase']);?>');"><img src="imagenes/16x16/retroceder.png" class="icon16"/></a>

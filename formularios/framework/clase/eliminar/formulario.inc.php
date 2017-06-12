@@ -1,6 +1,6 @@
 <?php 
 $afc=new Aplicacion_Framework_Clases();
-$clase=$afc->consultar($validaciones->recibir("clase"));
+$clase=$afc->consultar(Request::getValue("clase"));
 /** Valores **/
 $html="<div class=\"i100x100_eliminar\" style=\"float: left;\"></div>";
 $html.="<div class=\"notificacion\"><p><b>Eliminar Clase ".$clase['clase'].".</b><br>";
@@ -9,7 +9,7 @@ $html.="acción es irreversible. Antes de proceder, confirme o cancele la presen
 $html.="</p></div>";
 /** Campos **/
 $f->oculto("clase",$clase['clase']);
-$f->oculto("itable",$validaciones->recibir("itable"));
+$f->oculto("itable",Request::getValue("itable"));
 $f->campos['eliminar']=$f->button("eliminar".$f->id,"submit","Confirmar");
 $f->campos['cancelar']=$f->button("cancelar".$f->id,"button","Cancelar");
 // Celdas

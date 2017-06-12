@@ -5,8 +5,8 @@ require_once($ROOT . "modulos/usuarios/librerias/Configuracion.cnf.php");
 $fechas=new Fechas();
 $usuarios = new Aplicacion_Usuarios();
 /** Valores * */
-$valores['criterio'] = $validaciones->recibir("criterio");
-$valores['valor'] = $validaciones->recibir("valor");
+$valores['criterio'] = Request::getValue("criterio");
+$valores['valor'] = Request::getValue("valor");
 /** Campos * */
 $f->oculto("fechainicial", "2012-01-01");
 $f->oculto("fechafinal", $fechas->hoy());

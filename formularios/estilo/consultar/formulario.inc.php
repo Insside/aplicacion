@@ -2,11 +2,11 @@
 /** Variables * */
 $ae=new Aplicacion_Estilos();
 /** Valores * */
-$v=$ae->consultar($validaciones->recibir("estilo"));
+$v=$ae->consultar(Request::getValue("estilo"));
 //$v['css']=$ae->expresion($estilo);
 $v['css']=urldecode($v['css']);
 /** Campos **/
-$itable=$validaciones->recibir("itable");
+$itable=Request::getValue("itable");
 if(!empty($itable)){$f->oculto("itable",$itable);}
 $f->campos['estilo']=$f->text("estilo",$v['estilo'],"10","required",true);
 $f->campos['identidad']=$f->text("identidad",$v['identidad'],"64","",true);

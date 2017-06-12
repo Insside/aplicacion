@@ -36,10 +36,10 @@ $equipos=new Usuarios_Equiposs();
 /** Valores **/
 $usuario=Sesion::usuario();
 $valores['usuario']=time();
-$valores['empleado']=$validaciones->recibir("_empleado");
-$valores['alias']=$validaciones->recibir("_alias");
-$valores['clave']=$validaciones->recibir("_clave");
-$valores['equipo']=$validaciones->recibir("_equipo");
+$valores['empleado']=Request::getValue("_empleado");
+$valores['alias']=Request::getValue("_alias");
+$valores['clave']=Request::getValue("_clave");
+$valores['equipo']=Request::getValue("_equipo");
 $valores['fecha']=$fechas->hoy();
 $valores['hora']=$fechas->ahora();
 $valores['creador']=$usuario['usuario'];

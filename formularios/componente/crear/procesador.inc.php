@@ -1,17 +1,17 @@
 <?php
 $validaciones=new Validaciones();
-$datos['componente']=$validaciones->recibir('componente');
-$datos['herencia']=$validaciones->recibir('herencia');
-$datos['titulo']=$validaciones->recibir('titulo');
-$datos['descripcion']=$validaciones->recibir('descripcion');
-$datos['funcion']=$validaciones->recibir('funcion');
-$datos['icono']=$validaciones->recibir('icono');
-$datos['peso']=$validaciones->recibir('peso');
-$datos['estado']=$validaciones->recibir('estado');
-$datos['permiso']=$validaciones->recibir('permiso');
-$datos['fecha']=$validaciones->recibir('fecha');
-$datos['hora']=$validaciones->recibir('hora');
-$datos['creador']=$validaciones->recibir('creador');
+$datos['componente']=Request::getValue('componente');
+$datos['herencia']=Request::getValue('herencia');
+$datos['titulo']=Request::getValue('titulo');
+$datos['descripcion']=Request::getValue('descripcion');
+$datos['funcion']=Request::getValue('funcion');
+$datos['icono']=Request::getValue('icono');
+$datos['peso']=Request::getValue('peso');
+$datos['estado']=Request::getValue('estado');
+$datos['permiso']=Request::getValue('permiso');
+$datos['fecha']=Request::getValue('fecha');
+$datos['hora']=Request::getValue('hora');
+$datos['creador']=Request::getValue('creador');
 $componentes= new Aplicacion_Modulos_Componentes();
 $componentes->crear($datos);
 /** JavScripts **/

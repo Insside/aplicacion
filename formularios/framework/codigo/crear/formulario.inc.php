@@ -32,7 +32,7 @@ $validaciones = new Validaciones();
 $codigos=new Aplicacion_Framework_Codigos();
 /** Valores **/
 $v['codigo']=time();
-$v['funcion']=$validaciones->recibir("funcion");
+$v['funcion']=Request::getValue("funcion");
 $v['contenido']=$codigos->ultimo($v['funcion']);
 $v['version']=$codigos->version($v['funcion']);
 $v['fecha']=$fechas->hoy();

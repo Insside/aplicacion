@@ -28,8 +28,8 @@ $usuario=Sesion::usuario();
  * POSSIBILITY OF SUCH DAMAGE.
  */
 $validaciones=new Validaciones();
-$transaccion=$validaciones->recibir("transaccion");
-$trasmision = $validaciones->recibir("trasmision");
+$transaccion=Request::getValue("transaccion");
+$trasmision = Request::getValue("trasmision");
 $url['formulario']=$ROOT . "modulos/aplicacion/formularios/framework/estilo/crear/formulario.inc.php";
 $url['procesador']=$ROOT . "modulos/aplicacion/formularios/framework/estilo/crear/procesador.inc.php";
 

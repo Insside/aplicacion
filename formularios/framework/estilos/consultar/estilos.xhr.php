@@ -28,13 +28,13 @@ $validaciones=new Validaciones();
  * POSSIBILITY OF SUCH DAMAGE.
  */
 $usuario=Sesion::usuario();
-$v["clase"]=$validaciones->recibir("clase");
+$v["clase"]=Request::getValue("clase");
 $v["uid"]=$usuario["usuario"];
-$v["criterio"]=$validaciones->recibir("criterio");
-$v["valor"]=$validaciones->recibir("valor");
-$v["inicio"]=$validaciones->recibir("inicio");
-$v["fin"]=$validaciones->recibir("fin");
-$v["transaccion"]=$validaciones->recibir("transaccion");
+$v["criterio"]=Request::getValue("criterio");
+$v["valor"]=Request::getValue("valor");
+$v["inicio"]=Request::getValue("inicio");
+$v["fin"]=Request::getValue("fin");
+$v["transaccion"]=Request::getValue("transaccion");
 $v["url"]="modulos/aplicacion/formularios/framework/estilos/consultar/estilos.json.php?"
         . "clase=".$v["clase"]
         . "&uid=".$v["uid"]

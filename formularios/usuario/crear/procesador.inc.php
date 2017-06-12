@@ -31,14 +31,14 @@ $usuarios=new Aplicacion_Usuarios();
  */
 
 /** Celdas **/
-$datos["usuario"]=$validaciones->recibir("usuario");
-$datos["empleado"]=$validaciones->recibir("empleado");
-$datos["alias"]=$validaciones->recibir("alias");
-$datos["clave"]=$validaciones->recibir("clave");
-$datos["equipo"]=$validaciones->recibir("equipo");
-$datos["fecha"]=$validaciones->recibir("fecha");
-$datos["hora"]=$validaciones->recibir("hora");
-$datos["creador"]=$validaciones->recibir("creador");
+$datos["usuario"]=Request::getValue("usuario");
+$datos["empleado"]=Request::getValue("empleado");
+$datos["alias"]=Request::getValue("alias");
+$datos["clave"]=Request::getValue("clave");
+$datos["equipo"]=Request::getValue("equipo");
+$datos["fecha"]=Request::getValue("fecha");
+$datos["hora"]=Request::getValue("hora");
+$datos["creador"]=Request::getValue("creador");
 $usuarios->crear($datos);
 /** JavaScripts **/
 $f->JavaScript("if(itable_usuarios){itable_usuarios.refresh();}");

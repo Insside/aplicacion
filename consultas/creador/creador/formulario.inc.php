@@ -2,8 +2,8 @@
 $empleados = new Empleados();
 $usuarios = new Aplicacion_Usuarios();
 /** Variables Recibidas **/
-$transaccion=$validaciones->recibir("transaccion");
-$usuario=$usuarios->consultar($validaciones->recibir("usuario"));
+$transaccion=Request::getValue("transaccion");
+$usuario=$usuarios->consultar(Request::getValue("usuario"));
 //print_r($_REQUEST);
 /*
  * Copyright (c) 2014, Jose Alexis Correa Valencia

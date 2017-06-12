@@ -1,7 +1,7 @@
 <?php 
-$itable=$validaciones->recibir("itable");
+$itable=Request::getValue("itable");
 $afe=new Aplicacion_Framework_Estilos();
-$estilo=$afe->consultar($validaciones->recibir("estilo"));
+$estilo=$afe->consultar(Request::getValue("estilo"));
 /** Valores **/
 $html="<div class=\"i100x100_eliminar\" style=\"float: left;\"></div>";
 $html.="<div class=\"notificacion\"><p><b>Eliminar Estilo ".$estilo['estilo'].".</b><br>";

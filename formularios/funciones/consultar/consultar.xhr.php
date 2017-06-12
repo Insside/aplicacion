@@ -30,11 +30,11 @@ $validaciones=new Validaciones();
  */
 $usuario=Sesion::usuario();
 $v['uid']=$usuario['usuario'];
-$v['criterio']=$validaciones->recibir("criterio");
-$v['valor']=$validaciones->recibir("valor");
-$v['fechainicial']=$validaciones->recibir("fechainicial");
-$v['fechafinal']=$validaciones->recibir("fechafinal");
-$v['transaccion']=$validaciones->recibir("transaccion");
+$v['criterio']=Request::getValue("criterio");
+$v['valor']=Request::getValue("valor");
+$v['fechainicial']=Request::getValue("fechainicial");
+$v['fechafinal']=Request::getValue("fechafinal");
+$v['transaccion']=Request::getValue("transaccion");
 $v['url']="modulos/aplicacion/formularios/funciones/consultar/consultar.json.php?"
         . "uid=".$v['uid']
         . "&criterio=".$v['criterio']

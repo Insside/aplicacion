@@ -28,13 +28,13 @@ $tsc=new Tesoreria_Solicitudes_Cheques();
  * POSSIBILITY OF SUCH DAMAGE.
  */
 /** Valores **/
-$valores['criterio']=$validaciones->recibir("criterio");
-$valores['valor']=$validaciones->recibir("valor");
-$valores['inicial']=$validaciones->recibir("inicial");   
-$valores['final']=$validaciones->recibir("final");
+$valores['criterio']=Request::getValue("criterio");
+$valores['valor']=Request::getValue("valor");
+$valores['inicial']=Request::getValue("inicial");   
+$valores['final']=Request::getValue("final");
 
-$s['inicial']=$validaciones->recibir("inicial");
-$s['final']=$validaciones->recibir("final");
+$s['inicial']=Request::getValue("inicial");
+$s['final']=Request::getValue("final");
 
 $valores['inicial']=empty($s['inicial'])?"2012-01-01":$s['inicial'];
 $valores['final']=empty($s['final'])?$fechas->hoy():$s['final'];

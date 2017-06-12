@@ -35,9 +35,9 @@ $usuarios=new Aplicacion_Usuarios();
  */
 
 /** Valores **/
-$usuario=$usuarios->consultar($validaciones->recibir("usuario"));
+$usuario=$usuarios->consultar(Request::getValue("usuario"));
 $valores=$usuario;
-$itable=$validaciones->recibir("itable");
+$itable=Request::getValue("itable");
 /** Campos **/
 $f->oculto("itable",$itable); 
 $f->campos['usuario']=$f->text("usuario",$valores['usuario'], "15","required codigo", true);

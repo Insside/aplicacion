@@ -31,15 +31,15 @@ $fechas = new Fechas();
 $validaciones = new Validaciones();
 /** Valores **/
 $usuario=Sesion::usuario();
-$itable=$validaciones->recibir("itable");
-$clase=$validaciones->recibir("clase");
+$itable=Request::getValue("itable");
+$clase=Request::getValue("clase");
 
 
 $valores['funcion']=time();
 $valores['clase']=$clase;
-$valores['nombre']=$validaciones->recibir("_nombre");
-$valores['parametros']=$validaciones->recibir("_parametros");
-$valores['descripcion']=$validaciones->recibir("_descripcion");
+$valores['nombre']=Request::getValue("_nombre");
+$valores['parametros']=Request::getValue("_parametros");
+$valores['descripcion']=Request::getValue("_descripcion");
 $valores['fecha']=$fechas->hoy();
 $valores['hora']=$fechas->ahora();
 $valores['creador']=$usuario['usuario'];

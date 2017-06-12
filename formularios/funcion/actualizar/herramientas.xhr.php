@@ -28,7 +28,7 @@ require_once($ROOT."modulos/aplicacion/librerias/Configuracion.cnf.php");
  * POSSIBILITY OF SUCH DAMAGE.
  */
 $validaciones=new Validaciones();
-$transaccion=$validaciones->recibir("transaccion");
+$transaccion=Request::getValue("transaccion");
 $h=new Herramientas();
 $h->botones["guardar"]=$h->boton("Guardar","guardarf".$transaccion, "guardar");
 $h->botones["ejecutar"]=$h->boton("Ejecutar","ejecutarf".$transaccion, "ejecutar");

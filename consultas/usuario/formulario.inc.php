@@ -29,8 +29,8 @@ $usuarios = new Aplicacion_Usuarios();
  */
 
 /** Clases Declaradas E Inicializadas * */
-$transaccion=$validaciones->recibir("transaccion");
-$usuario=$usuarios->consultar($validaciones->recibir("usuario"));
+$transaccion=Request::getValue("transaccion");
+$usuario=$usuarios->consultar(Request::getValue("usuario"));
 $perfil = $empleados->perfil($usuario['empleado']);
 /** Campos * */
 $f->campos['empleado'] = $f->campo("empleado", $perfil['empleado']);

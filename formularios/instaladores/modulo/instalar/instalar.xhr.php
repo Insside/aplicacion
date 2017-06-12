@@ -28,8 +28,8 @@ require_once($ROOT . "modulos/aplicacion/librerias/Configuracion.cnf.php");
  */
 Sesion::init();
 $validaciones=new Validaciones();
-$transaccion=$validaciones->recibir("transaccion");
-$trasmision = $validaciones->recibir("trasmision");
+$transaccion=Request::getValue("transaccion");
+$trasmision = Request::getValue("trasmision");
 $_path= dirname(__FILE__);
 $url['formulario']=$_path. "/formulario.inc.php";
 $url['procesador']=$_path . "/procesador.inc.php";

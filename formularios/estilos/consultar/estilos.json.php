@@ -34,14 +34,14 @@ header('Content-Type: application/json');
 $usuario = Sesion::usuario();
 
 /** Variables Recibidas * */
-$v["clase"]= $validaciones->recibir("clase");
-$v['criterio'] = $validaciones->recibir("criterio");
-$v['valor'] = $validaciones->recibir("valor");
-$v['inicio'] = $validaciones->recibir("inicio");
-$v['fin'] = $validaciones->recibir("fin");
-$v['transaccion'] = $validaciones->recibir("transaccion");
-$v['page'] = $validaciones->recibir("page");
-$v['perpage'] = $validaciones->recibir("perpage");
+$v["clase"]= Request::getValue("clase");
+$v['criterio'] = Request::getValue("criterio");
+$v['valor'] = Request::getValue("valor");
+$v['inicio'] = Request::getValue("inicio");
+$v['fin'] = Request::getValue("fin");
+$v['transaccion'] = Request::getValue("transaccion");
+$v['page'] = Request::getValue("page");
+$v['perpage'] = Request::getValue("perpage");
 /** Verificaciones * */
 /**
  * Se evalua el comportamiento en caso de no recibir el periodo inicial y final de la consulta para lo 

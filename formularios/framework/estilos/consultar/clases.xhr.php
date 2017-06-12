@@ -29,11 +29,11 @@ $validaciones=new Validaciones();
  */
 $usuario=Sesion::usuario();
 $v['uid']=$usuario['usuario'];
-$v['criterio']=$validaciones->recibir("criterio");
-$v['valor']=$validaciones->recibir("valor");
-$v['inicio']=$validaciones->recibir("inicio");
-$v['fin']=$validaciones->recibir("fin");
-$v['transaccion']=$validaciones->recibir("transaccion");
+$v['criterio']=Request::getValue("criterio");
+$v['valor']=Request::getValue("valor");
+$v['inicio']=Request::getValue("inicio");
+$v['fin']=Request::getValue("fin");
+$v['transaccion']=Request::getValue("transaccion");
 $v['url']="modulos/aplicacion/formularios/framework/estilos/consultar/clases.json.php?"
         . "uid=".$v['uid']
         . "&criterio=".$v['criterio']

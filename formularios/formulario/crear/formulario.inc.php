@@ -7,10 +7,10 @@ $cadenas = new Cadenas();
 $fechas = new Fechas();
 $validaciones = new Validaciones();
 /** Valores **/
-$itable=$validaciones->recibir("itable");
+$itable=Request::getValue("itable");
 $valores['formulario']=time();
-$valores['nombre']=$validaciones->recibir("_nombre");
-$valores['descripcion']=$validaciones->recibir("_descripcion");
+$valores['nombre']=Request::getValue("_nombre");
+$valores['descripcion']=Request::getValue("_descripcion");
 $valores['creador']= Sesion::getUsuario();
 $valores['fecha']=$fechas->hoy();
 $valores['hora']=$fechas->ahora();

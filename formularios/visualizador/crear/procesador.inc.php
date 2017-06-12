@@ -26,8 +26,8 @@ require_once($ROOT . "modulos/aplicacion/librerias/Configuracion.cnf.php");
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-$transaccion = $validaciones->recibir('transaccion');
-$tabla =  $validaciones->recibir('tabla');
+$transaccion = Request::getValue('transaccion');
+$tabla =  Request::getValue('tabla');
 $cadenas = new Cadenas();
 
 $db = new MySQL(Sesion::getConexion());
@@ -53,7 +53,7 @@ $codigo.= "\$sectores = new Sectores();\n";
 $codigo.= "\$validaciones = new Validaciones();\n";
 $codigo.= "/** Valores **/\n";
 $codigo.= "\$clase= new Clase();\n";
-$codigo.= "\$valores=\$clase->consultar(\$validaciones->recibir(\"".$campos[0]['Field']."\"));\n";
+$codigo.= "\$valores=\$clase->consultar(\Request::getValue(\"".$campos[0]['Field']."\"));\n";
 
 
 $codigo.= "/** Campos **/\n";

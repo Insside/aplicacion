@@ -30,15 +30,15 @@ $usuarios=new Aplicacion_Usuarios();
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-$itable=$validaciones->recibir("itable");
+$itable=Request::getValue("itable");
 /** Celdas **/
-$usuario=$validaciones->recibir("usuario");
-$usuarios->actualizar($usuario,"empleado",$validaciones->recibir("empleado"));
-$usuarios->actualizar($usuario,"alias",$validaciones->recibir("alias"));
-$usuarios->actualizar($usuario,"clave",$validaciones->recibir("clave"));
-$usuarios->actualizar($usuario,"equipo",$validaciones->recibir("equipo"));
-$usuarios->actualizar($usuario,"creador",$validaciones->recibir("creador"));
-$usuarios->actualizar($usuario,"estado",$validaciones->recibir("estado"));
+$usuario=Request::getValue("usuario");
+$usuarios->actualizar($usuario,"empleado",Request::getValue("empleado"));
+$usuarios->actualizar($usuario,"alias",Request::getValue("alias"));
+$usuarios->actualizar($usuario,"clave",Request::getValue("clave"));
+$usuarios->actualizar($usuario,"equipo",Request::getValue("equipo"));
+$usuarios->actualizar($usuario,"creador",Request::getValue("creador"));
+$usuarios->actualizar($usuario,"estado",Request::getValue("estado"));
 /** JavaScripts **/
 $f->JavaScript("if(".$itable."){".$itable.".refresh();}");
 $f->windowClose();

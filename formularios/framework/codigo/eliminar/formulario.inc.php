@@ -26,8 +26,8 @@ $validaciones=new Validaciones();
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-$codigo=$validaciones->recibir('codigo');
-$f->oculto("itable",$validaciones->recibir('itable'));
+$codigo=Request::getValue('codigo');
+$f->oculto("itable",Request::getValue('itable'));
 $f->oculto("codigo",$codigo);
 $html="<div class=\"i100x100_irreversible\" style=\"float: left;\"></div>";
 $html.="<div class=\"notificacion\"><p><b>Eliminar Código.</b><br>";

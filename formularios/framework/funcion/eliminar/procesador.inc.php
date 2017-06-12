@@ -27,8 +27,8 @@ $funciones=new Aplicacion_Framework_Funciones();
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-$itable=$validaciones->recibir('itable');
-$funciones->eliminar($validaciones->recibir('funcion'));
+$itable=Request::getValue('itable');
+$funciones->eliminar(Request::getValue('funcion'));
 /** JavaScripts **/
 $f->windowClose();
 $f->JavaScript("if(".$itable."){".$itable.".refresh();}");

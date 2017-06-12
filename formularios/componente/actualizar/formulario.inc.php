@@ -14,7 +14,7 @@ $funciones = new Funciones();
 $permisos = new Aplicacion_Permisos();
 /** Valores * */
 $usuario=Sesion::usuario();
-$valores = $componentes->consultar($validaciones->recibir("componente"));
+$valores = $componentes->consultar(Request::getValue("componente"));
 $valores['fecha'] = $fechas->hoy();
 $valores['hora'] = $fechas->ahora();
 $valores['creador'] = $usuario['usuario'];

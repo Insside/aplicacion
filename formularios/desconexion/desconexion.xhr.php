@@ -28,8 +28,8 @@ require_once($ROOT . "modulos/aplicacion/librerias/Configuracion.cnf.php");
  */
 
 $validaciones=new Validaciones();
-$transaccion=$validaciones->recibir("transaccion");
-$trasmision = $validaciones->recibir("trasmision");
+$transaccion=Request::getValue("transaccion");
+$trasmision = Request::getValue("trasmision");
 $url['formulario']=$ROOT . "modulos/aplicacion/formularios/desconexion/formulario.inc.php";
 $url['procesador']=$ROOT . "modulos/aplicacion/formularios/desconexion/procesador.inc.php";
 

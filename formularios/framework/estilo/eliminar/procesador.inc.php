@@ -4,8 +4,8 @@
  * proceso implica dos acciones eliminar el registro de la base de datos y eliminar fisicamente el archivo
  * */
 
-$itable=$validaciones->recibir("itable");
-$estilo=$validaciones->recibir("estilo");
+$itable=Request::getValue("itable");
+$estilo=Request::getValue("estilo");
 $afe=new Aplicacion_Framework_Estilos();
 $afe->eliminar($estilo); 
 $f->windowClose();

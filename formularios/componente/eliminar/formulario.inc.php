@@ -1,6 +1,6 @@
 <?php 
 $validaciones=new Validaciones();
-$componente=$validaciones->recibir('componente');
+$componente=Request::getValue('componente');
 /* 
  * Copyright (c) 2014, Jose Alexis Correa Valencia
  * All rights reserved.

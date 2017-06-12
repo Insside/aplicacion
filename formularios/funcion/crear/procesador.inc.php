@@ -7,12 +7,12 @@ $configuraciones = new Configuraciones();
 $validaciones = new Validaciones();
 $funciones = new Funciones(); 
 
-$itable = $validaciones->recibir('itable');
-$modulo = $validaciones->recibir('modulo');
-$nombre = $validaciones->recibir('nombre');
-$parametros = $validaciones->recibir('parametros');
-$cuerpo = $validaciones->recibir('cuerpo');
-$descripcion = $validaciones->recibir('descripcion');
+$itable = Request::getValue('itable');
+$modulo = Request::getValue('modulo');
+$nombre = Request::getValue('nombre');
+$parametros = Request::getValue('parametros');
+$cuerpo = Request::getValue('cuerpo');
+$descripcion = Request::getValue('descripcion');
 $estado = "ACTIVA";
 
 $funcion = $funciones->crear();

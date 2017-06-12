@@ -1,6 +1,6 @@
 <?php 
 $ae=new Aplicacion_Estilos();
-$estilo=$ae->consultar($validaciones->recibir("estilo"));
+$estilo=$ae->consultar(Request::getValue("estilo"));
 /** Valores **/
 $html="<div class=\"i100x100_eliminar\" style=\"float: left;\"></div>";
 $html.="<div class=\"notificacion\"><p><b>Eliminar Estilo ".$estilo['estilo'].".</b><br>";
@@ -9,7 +9,7 @@ $html.="Se dispone a eliminar un estilo css del framework se le solicita conside
 $html.="</p></div>";
 /** Campos **/
 $f->oculto("estilo",$estilo['estilo']);
-$f->oculto("itable",$validaciones->recibir("itable"));
+$f->oculto("itable",Request::getValue("itable"));
 $f->campos['eliminar']=$f->button("eliminar".$f->id,"submit","Confirmar");
 $f->campos['cancelar']=$f->button("cancelar".$f->id,"button","Cancelar");
 // Celdas

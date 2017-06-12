@@ -3,8 +3,8 @@ $empleados = new Empleados();
 $usuarios = new Aplicacion_Usuarios();
 $equipos=new Usuarios_Equiposs();
 /** Variables Recibidas **/
-$transaccion=$validaciones->recibir("transaccion");
-$usuario=$usuarios->consultar($validaciones->recibir("usuario"));
+$transaccion=Request::getValue("transaccion");
+$usuario=$usuarios->consultar(Request::getValue("usuario"));
 $equipo=$equipos->consultar($usuario['equipo']);
 /*
  * Copyright (c) 2014, Jose Alexis Correa Valencia

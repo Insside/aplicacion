@@ -7,25 +7,25 @@ $validaciones = new Validaciones();
 $funciones=new Funciones();
 
 
-$cuerpo=$validaciones->recibir("cuerpo");
-$descripcion=$validaciones->recibir("descripcion");
+$cuerpo=Request::getValue("cuerpo");
+$descripcion=Request::getValue("descripcion");
 /** Campos Recibidos **/
 echo("<pre>");
 print_r($_REQUEST);
 echo("</pre>");
 $datos=array();
-$funcion=$validaciones->recibir("funcion");
-$datos['modulo']=$validaciones->recibir("modulo");
-$datos['nombre']=$validaciones->recibir("nombre");
-$datos['parametros']=$validaciones->recibir("parametros");
+$funcion=Request::getValue("funcion");
+$datos['modulo']=Request::getValue("modulo");
+$datos['nombre']=Request::getValue("nombre");
+$datos['parametros']=Request::getValue("parametros");
 if(!empty($cuerpo)){$datos['cuerpo']=urlencode($cuerpo);}
 if(!empty($descripcion)){$datos['descripcion']= urlencode($descripcion);}
-$datos['version']=$validaciones->recibir("version")+ 0.001;
-//$datos['creacion']=$validaciones->recibir("creacion");
+$datos['version']=Request::getValue("version")+ 0.001;
+//$datos['creacion']=Request::getValue("creacion");
 $datos['modificacion']=$fechas->hoy();
-//$datos['estado']=$validaciones->recibir("estado");
-//$datos['creador']=$validaciones->recibir("creador");
-//$datos['permiso']=$validaciones->recibir("permiso");
+//$datos['estado']=Request::getValue("estado");
+//$datos['creador']=Request::getValue("creador");
+//$datos['permiso']=Request::getValue("permiso");
 foreach ($datos as $campo => $valor) {
     $funciones->actualizar($funcion,$campo,$valor);
 }

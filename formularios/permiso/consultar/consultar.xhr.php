@@ -28,8 +28,8 @@ $roles=new Roles();
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-$transaccion=$validaciones->recibir("transaccion");
-$trasmision = $validaciones->recibir("trasmision");
+$transaccion=Request::getValue("transaccion");
+$trasmision = Request::getValue("trasmision");
 $url['formulario']=$ROOT . "modulos/usuarios/formularios/permiso/consultar/formulario.inc.php";
 $url['procesador']=$ROOT . "modulos/usuarios/formularios/permiso/consultar/procesador.inc.php";
 $f = new Forms($transaccion);

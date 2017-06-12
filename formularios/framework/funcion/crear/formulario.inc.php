@@ -36,15 +36,15 @@ $validaciones = new Validaciones();
 /** Valores **/
 $usuario=Sesion::usuario();
 $valores['funcion']=time();
-$valores['nombre']=$validaciones->recibir("_nombre");
-$valores['parametros']=$validaciones->recibir("_parametros");
-$valores['descripcion']=$validaciones->recibir("_descripcion");
-$valores['clase']=$validaciones->recibir("clase");
+$valores['nombre']=Request::getValue("_nombre");
+$valores['parametros']=Request::getValue("_parametros");
+$valores['descripcion']=Request::getValue("_descripcion");
+$valores['clase']=Request::getValue("clase");
 $valores['fecha']=$fechas->hoy();
 $valores['hora']=$fechas->ahora();
 $valores['creador']=$usuario['usuario'];
 /** Campos **/
-$f->oculto("itable",$validaciones->recibir("itable"));
+$f->oculto("itable",Request::getValue("itable"));
 $f->campos['clase']=$f->text("clase",$valores['clase'],"10","required codigo",true);
 $f->campos['funcion']=$f->text("funcion",$valores['funcion'],"10","required codigo",true);
 $f->campos['tipo']=$f->dynamic(array("field"=>"tipo"));

@@ -25,9 +25,9 @@ $sesion=new Sesion();
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-$criterio=$validaciones->recibir("criterio");
-$valor=$validaciones->recibir("valor");
-$inicial=$validaciones->recibir("inicial");
-$final=$validaciones->recibir("final");
+$criterio=Request::getValue("criterio");
+$valor=Request::getValue("valor");
+$inicial=Request::getValue("inicial");
+$final=Request::getValue("final");
 $f->JavaScript("MUI.Tesoreria_Solicitudes_Busqueda_General('".$criterio."','".$valor."','".$inicial."','".$final."');");
 ?>

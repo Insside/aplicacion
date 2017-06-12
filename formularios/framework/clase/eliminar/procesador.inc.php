@@ -4,8 +4,8 @@
  * proceso implica dos acciones eliminar el registro de la base de datos y eliminar fisicamente el archivo
  * */
 
-$itable=$validaciones->recibir("itable");
-$clase=$validaciones->recibir("clase");
+$itable=Request::getValue("itable");
+$clase=Request::getValue("clase");
 $afc=new Aplicacion_Framework_Clases();
 $afc->eliminar($clase); 
 $f->windowClose();

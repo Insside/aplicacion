@@ -25,10 +25,10 @@ $sesion=new Sesion();
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-$criterio=$validaciones->recibir("criterio");
-$valor=$validaciones->recibir("valor");
-$inicio=$validaciones->recibir("fechainicial");
-$fin=$validaciones->recibir("fechafinal");
+$criterio=Request::getValue("criterio");
+$valor=Request::getValue("valor");
+$inicio=Request::getValue("fechainicial");
+$fin=Request::getValue("fechafinal");
 $sesion->setValue("fechainicial", $inicio);
 $sesion->setValue("fechafinal", $fin);
 $f->JavaScript("MUI.Usuarios_Usuarios_Consultar('".$criterio."','".$valor."','".$inicio."','".$fin."');");

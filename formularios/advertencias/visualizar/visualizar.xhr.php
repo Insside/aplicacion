@@ -28,8 +28,8 @@ require_once($ROOT . "modulos/aplicacion/librerias/Configuracion.cnf.php");
  */
 
 $validaciones=new Validaciones();
-$transaccion=$validaciones->recibir("transaccion");
-$mensaje=$validaciones->recibir("mensaje");
+$transaccion=Request::getValue("transaccion");
+$mensaje=Request::getValue("mensaje");
 $f = new Forms($transaccion);
 echo($f->apertura());
 echo($mensaje);

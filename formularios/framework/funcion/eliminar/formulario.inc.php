@@ -26,9 +26,9 @@ $validaciones=new Validaciones();
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-$funcion=$validaciones->recibir('funcion');
+$funcion=Request::getValue('funcion');
 $f->oculto("funcion",$funcion);
-$f->oculto("itable",$validaciones->recibir('itable'));
+$f->oculto("itable",Request::getValue('itable'));
 $html="<div class=\"i100x100_irreversible\" style=\"float: left;\"></div>";
 $html.="<div class=\"notificacion\"><p><b>Eliminar Función.</b><br>";
 $html.="Se dispone a eliminar una función esta acción que es irreversible antes de proceder, "

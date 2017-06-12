@@ -8,10 +8,10 @@ $usuarios = new Aplicacion_Usuarios();
 $cadenas = new Cadenas();
 $validaciones=new Validaciones();
 /** Variables Recibidas * */
-$transaccion = $validaciones->recibir('transaccion');
-$estado = $validaciones->recibir('estado');
-$buscar = $validaciones->recibir('buscar');
-$herencia=$validaciones->recibir('herencia');
+$transaccion = Request::getValue('transaccion');
+$estado = Request::getValue('estado');
+$buscar = Request::getValue('buscar');
+$herencia=Request::getValue('herencia');
 /* * Variables Definidas * */
 $tabla = "aplicacion_modulos_componentes";
 

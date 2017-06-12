@@ -26,7 +26,7 @@ $cadenas=new Cadenas();
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-$usuario=$usuarios->consultar($validaciones->recibir("usuario"));
+$usuario=$usuarios->consultar(Request::getValue("usuario"));
 
 $db = new MySQL(Sesion::getConexion());
 $consulta = $db->sql_query("SELECT * FROM `usuarios_acciones` WHERE(`usuario`='" . $usuario['usuario']. "') ORDER BY `fecha`,`hora` DESC;");

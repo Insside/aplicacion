@@ -28,8 +28,8 @@ $validaciones=new Validaciones();
  * POSSIBILITY OF SUCH DAMAGE.
  */
 $validaciones=new Validaciones();
-$transaccion=$validaciones->recibir("transaccion");
-$trasmision = $validaciones->recibir("trasmision");
+$transaccion=Request::getValue("transaccion");
+$trasmision = Request::getValue("trasmision");
 $url['formulario']=$ROOT . "modulos/solicitudes/consultas/responsabilidades/responsable/formulario.inc.php";
 $url['procesador']=$ROOT . "modulos/solicitudes/consultas/responsabilidades/responsable/procesador.inc.php";
 

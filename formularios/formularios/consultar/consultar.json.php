@@ -35,15 +35,15 @@ $perfiles = new Usuarios_Perfiles();
  * POSSIBILITY OF SUCH DAMAGE.
  */
 $usuario = Sesion::usuario();
-$herencia=$validaciones->recibir("herencia");
+$herencia=Request::getValue("herencia");
 /** Variables Recibidas * */
-$v['criterio'] = $validaciones->recibir("criterio");
-$v['valor'] = $validaciones->recibir("valor");
-$v['inicio'] = $validaciones->recibir("inicio");
-$v['fin'] = $validaciones->recibir("fin");
-$v['transaccion'] = $validaciones->recibir("transaccion");
-$v['page'] = $validaciones->recibir("page");
-$v['perpage'] = $validaciones->recibir("perpage");
+$v['criterio'] = Request::getValue("criterio");
+$v['valor'] = Request::getValue("valor");
+$v['inicio'] = Request::getValue("inicio");
+$v['fin'] = Request::getValue("fin");
+$v['transaccion'] = Request::getValue("transaccion");
+$v['page'] = Request::getValue("page");
+$v['perpage'] = Request::getValue("perpage");
 /** Verificaciones * */
 /**
  * Se evalua el comportamiento en caso de no recibir el periodo inicial y final de la consulta para lo 

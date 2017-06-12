@@ -4,12 +4,12 @@
  * proceso implica dos acciones eliminar el registro de la base de datos y eliminar fisicamente el archivo
  * */
 
-$itable=$validaciones->recibir("itable");
-$estilo=$validaciones->recibir("estilo");
+$itable=Request::getValue("itable");
+$estilo=Request::getValue("estilo");
 $ae=new Aplicacion_Estilos();
 $ae->eliminar($estilo); 
 /** JavaScripts **/
-$itable=$validaciones->recibir("itable");
+$itable=Request::getValue("itable");
 if(!empty($itable)){$f->JavaScript("if(".$itable."){".$itable.".refresh();}");}
 $f->windowClose();
 ?>
