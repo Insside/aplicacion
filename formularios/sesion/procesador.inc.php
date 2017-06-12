@@ -26,9 +26,9 @@ $validaciones = new Validaciones();
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-$usuario = $validaciones->recibir("usuario");
-$clave = $validaciones->recibir("clave");
-$empresa = $validaciones->recibir("empresa");
+$usuario = Request::getValue("usuario");
+$clave = Request::getValue("clave");
+$empresa = Request::getValue("empresa");
 
 if ((!empty($usuario) && !empty($clave) && !empty($empresa))) {
     Sesion::Iniciar($usuario, $clave, $empresa);

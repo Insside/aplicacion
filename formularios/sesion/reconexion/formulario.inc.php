@@ -10,8 +10,6 @@ $message= "<p>La sesión ha finalizado por favor ingrese nuevamente. "
 /** Campos * */
 $f->campos['continuar'] = $f->button("continuar" . $f->id, "button", "Reconectarse");
 /** Celdas * */
-$f->celdas['imagen'] = $f->celda("",$imagen, "", "");
-$f->celdas['info'] = $f->celda("", $info, "", "");
 /** Filas * */
 $f->fila["info"] =$f->getNotification(array("image"=>"cancel","message"=>$message));
 /** Compilando * */
